@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookshelf</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="head_bar">
+      <div class="logo">
+        <img src="img/logo-bookshelf.png" alt="Logo Bookshelf" />
+      </div>
+    </header>
+
+    <main>
+      <!-- Tambah Data Buku -->
+      <section class="input_section" id="add-book">
+        <h2>Masukkan Buku Baru</h2>
+        <form class="form" action="#" id="inputBook">
+          <div class="input">
+            <label for="inputBookTitle">Judul</label>
+            <input
+              id="inputBookTitle"
+              type="text"
+              name="inputBookTitle"
+              required />
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Penulis</label>
+            <input
+              id="inputBookAuthor"
+              type="text"
+              name="inputBookAuthor"
+              required />
+          </div>
+          <div class="input">
+            <label for="inputBookYear">Tahun</label>
+            <input
+              id="inputBookYear"
+              type="number"
+              name="inputBookYear"
+              required />
+          </div>
+          <div class="input_inline">
+            <label for="inputBookIsComplete">Selesai dibaca</label>
+            <input
+              id="inputBookIsComplete"
+              type="checkbox"
+              id="inputBookIsComplete" />
+          </div>
+          <!-- ubah button -->
+          <button
+            id="bookSubmit"
+            type="submit"
+            value="Submit"
+            name="Submit"
+            class="btn-submit">
+            Masukkan Buku ke rak <span>Belum selesai dibaca</span>
+          </button>
+        </form>
+      </section>
+
+      <!-- Cari Buku -->
+      <section class="search_section">
+        <h2>Cari Buku</h2>
+        <form id="searchBook">
+          <label for="searchBookTitle">Judul</label>
+          <input id="searchBookTitle" type="text" oninput="liveSearch(event)" />
+        </form>
+      </section>
+
+      <!-- Rak Belum Selesai dibaca -->
+      <section class="book_shelf">
+        <h2 class="container-header">Belum selesai dibaca</h2>
+
+        <div id="incompleteBookshelfList" class="book_list"></div>
+      </section>
+
+      <!-- Rak Selesai -->
+      <section class="book_shelf complete-bookshelf">
+        <h2 class="container-header">Selesai dibaca</h2>
+
+        <div id="completeBookshelfList" class="book_list"></div>
+      </section>
+    </main>
+
+    <script src="js/bookshelf.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

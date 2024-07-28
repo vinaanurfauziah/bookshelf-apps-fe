@@ -1,0 +1,229 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f9d2b3;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+.head_bar {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e37b58;
+  color: black;
+  font-family: 'Cormorant Garamond';
+}
+
+header.head_bar .logo img {
+  width: 100px;
+}
+
+main {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.input_section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #fdf8ec;
+}
+
+.input_section > h2 {
+  text-align: center;
+  color: black;
+  font-family: 'Cormorant Garamond';
+}
+
+.input_section > form > .input {
+  margin: 8px 0;
+}
+
+.input_section > form > button {
+  background-color: #e37b58;
+  color: black;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.input_section > form > button > span {
+  font-weight: bold;
+}
+
+.input_section > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: white;
+  border: 0px;
+}
+
+.input_section > form > .input > label {
+  color: black;
+  font-weight: bold;
+  font-family: 'Cormorant Garamond';
+}
+
+.input_section > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+  color: black;
+  font-weight: bold;
+  margin-right: 10px;
+  font-family: 'Cormorant Garamond';
+}
+
+.search_section {
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #fdf8ec;
+}
+
+.search_section > h2 {
+  color: black;
+  font-family: 'Cormorant Garamond';
+}
+
+.search_section > form {
+  padding: 16px;
+  width: 100%;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.search_section > form > label {
+  display: flex;
+  align-items: center;
+  font-family: 'Cormorant Garamond';
+  font-weight: bold;
+}
+
+.search_section > form > input {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: white;
+  border: 0px;
+}
+
+.book_shelf {
+  margin: 16px 0 0 0;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #fdf8ec;
+}
+
+.book_shelf > h2 {
+  color: black;
+  font-family: 'Cormorant Garamond';
+}
+
+.book_shelf > .book_list {
+  padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+  padding: 8px 16px 16px 16px;
+  border-radius: 5px;
+  margin: 10px 0;
+  background-color: white;
+}
+
+.book_shelf > .book_list > .book_item > h3,
+p {
+  margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+  background-color: darkgreen;
+  color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .orange {
+  background-color: darkorange;
+  color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+  background-color: darkred;
+  color: white;
+}
+
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#popup p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#popup button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#popup button:hover {
+  background-color: #f0f0f0;
+}
+
+#popup #confirm {
+  background-color: #4caf50;
+  color: white;
+}
+
+#popup #cancel {
+  background-color: #f44336;
+  color: white;
+}
